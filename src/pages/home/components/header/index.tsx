@@ -1,4 +1,4 @@
-import { Heart, Search, ShoppingBag } from "lucide-react"
+import { Heart, MagnifyingGlass, ShoppingBag } from "@phosphor-icons/react"
 import React from "react"
 import { Link } from "react-router-dom"
 
@@ -28,7 +28,7 @@ export const Header: React.FC = function () {
 
       <div className="flex items-center gap-5">
         <div className="flex gap-3">
-          <Search size={24} />
+          <MagnifyingGlass size={24} />
           <Heart size={24} />
           <ShoppingBag size={24} />
         </div>

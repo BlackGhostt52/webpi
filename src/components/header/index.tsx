@@ -1,6 +1,14 @@
-import { Heart, Search, ShoppingBag } from "lucide-react"
+import { Heart, MagnifyingGlass, ShoppingBag } from "@phosphor-icons/react"
 import React from "react"
 import { Link } from "react-router-dom"
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog"
 
 export const Header: React.FC = function () {
   return (
@@ -28,14 +36,27 @@ export const Header: React.FC = function () {
 
       <div className="flex items-center gap-5">
         <div className="flex gap-3">
-          <Search size={24} />
-          <Heart size={24} />
-          <ShoppingBag size={24} />
+          <MagnifyingGlass size={24} weight="regular" />
+          <Heart size={24} weight="regular" />
+          <ShoppingBag size={24} weight="regular" />
         </div>
         <button className="bg-zinc-900 px-8 rounded-md py-3 text-zinc-100 text-lg font-normal">
           Entrar
         </button>
       </div>
+
+      <Dialog>
+        <DialogTrigger>Open</DialogTrigger>
+        <DialogContent>
+          <DialogHeader>
+            <DialogTitle>Are you absolutely sure?</DialogTitle>
+            <DialogDescription>
+              This action cannot be undone. This will permanently delete your
+              account and remove your data from our servers.
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
     </header>
   )
 }

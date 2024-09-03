@@ -1,4 +1,4 @@
-import { MoveLeft, MoveRight } from "lucide-react"
+import { ArrowLeft, ArrowRight } from "@phosphor-icons/react"
 import React from "react"
 
 export const Categories: React.FC = function () {
@@ -8,10 +8,10 @@ export const Categories: React.FC = function () {
         <h2 className="w-96 text-3xl font-medium">Compre por categoria</h2>
         <div className="flex">
           <div className="bg-zinc-200 p-3 rounded-md">
-            <MoveLeft size={24} />
+            <ArrowLeft size={24} />
           </div>
           <div className="bg-zinc-200 p-3 ml-2 rounded-md">
-            <MoveRight size={24} />
+            <ArrowRight size={24} />
           </div>
         </div>
       </header>
