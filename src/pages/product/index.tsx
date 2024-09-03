@@ -2,7 +2,7 @@ import React from "react"
 import { ProductInfo } from "./components/product-info"
 import { Helmet } from "react-helmet-async"
 import { RelatedProduct } from "./components/related-product"
-import { Footer } from "../home/components/footer"
+import { Footer } from "@/components/footer"
 
 export const Product: React.FC = function () {
   return (
