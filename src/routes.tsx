@@ -7,6 +7,7 @@ import { SignIn } from "./pages/sign-in"
 import { SignUp } from "./pages/sign-up"
 import { ForgotPassword } from "./pages/forgot-password"
 import { ResetPassword } from "./pages/reset-password"
+import { Checkout } from "./pages/checkout"
 
 export const routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const routes = createBrowserRouter([
       {
         path: "/reset-password",
         element: <ResetPassword />,
+      },
+      {
+        path: "/checkout",
+        element: <Checkout />,
       },
     ],
   },

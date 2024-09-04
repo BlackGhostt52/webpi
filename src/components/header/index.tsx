@@ -8,7 +8,13 @@ import {
   DialogHeader,
   DialogTitle,
   DialogTrigger,
+  DialogClose,
+  DialogFooter,
+  DialogOverlay,
+  DialogPortal,
 } from "@/components/ui/dialog"
+import { ProductRow } from "./components/product-row"
+import { Button } from "../ui/button"
 
 export const Header: React.FC = function () {
   return (
@@ -38,25 +44,35 @@ export const Header: React.FC = function () {
         <div className="flex gap-3">
           <MagnifyingGlass size={24} weight="regular" />
           <Heart size={24} weight="regular" />
-          <ShoppingBag size={24} weight="regular" />
+
+          <Dialog>
+            <DialogTrigger asChild>
+              <ShoppingBag size={24} weight="regular" />
+            </DialogTrigger>
+            <DialogContent className="w-[352px] px-4">
+              <DialogHeader>
+                <DialogTitle>Você tem 5 items no seu carrinho</DialogTitle>
+              </DialogHeader>
+              <div className="">
+                <ProductRow />
+              </div>
+
+              <div className="flex flex-row justify-between">
+                <strong>Subtotal</strong>
+                <strong>R$ 200.00</strong>
+              </div>
+
+              <Button className="bg-transparent border-2 border-zinc-950 text-zinc-950 hover:bg-zinc-950 hover:text-zinc-50">
+                Ver carrinho
+              </Button>
+              <Button>Checkout de compras</Button>
+            </DialogContent>
+          </Dialog>
         </div>
         <button className="bg-zinc-900 px-8 rounded-md py-3 text-zinc-100 text-lg font-normal">
           Entrar
         </button>
       </div>
-
-      <Dialog>
-        <DialogTrigger>Open</DialogTrigger>
-        <DialogContent>
-          <DialogHeader>
-            <DialogTitle>Are you absolutely sure?</DialogTitle>
-            <DialogDescription>
-              This action cannot be undone. This will permanently delete your
-              account and remove your data from our servers.
-            </DialogDescription>
-          </DialogHeader>
-        </DialogContent>
-      </Dialog>
     </header>
   )
 }

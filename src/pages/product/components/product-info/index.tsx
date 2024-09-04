@@ -1,7 +1,7 @@
 import { StarRating } from "@/components/star-rating"
 import { Button } from "@/components/ui/button"
 import React from "react"
-import { Increment } from "../increment"
+import { Increment } from "../../../../components/increment"
 import { Favorite } from "../favorite"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
