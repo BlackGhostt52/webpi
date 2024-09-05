@@ -8,6 +8,7 @@ import { SignUp } from "./pages/sign-up"
 import { ForgotPassword } from "./pages/forgot-password"
 import { ResetPassword } from "./pages/reset-password"
 import { Checkout } from "./pages/checkout"
+import { ShippingAddress } from "./pages/shipping-address"
 
 export const routes = createBrowserRouter([
   {
@@ -45,6 +46,10 @@ export const routes = createBrowserRouter([
       {
         path: "/checkout",
         element: <Checkout />,
+      },
+      {
+        path: "/shipping-address",
+        element: <ShippingAddress />,
       },
     ],
   },
