@@ -8,7 +8,14 @@ import { SignUp } from "./pages/sign-up"
 import { ForgotPassword } from "./pages/forgot-password"
 import { ResetPassword } from "./pages/reset-password"
 import { Checkout } from "./pages/checkout"
-import { ShippingAddress } from "./pages/shipping-address"
+import { ProceedCheckout } from "./pages/proceed-checkout"
+import { ProfileLayout } from "./layouts/profile-layout"
+import { Orders } from "./pages/orders"
+import { PersonalInformation } from "./pages/personal-information"
+import { Wishes } from "./pages/wishes"
+import { ManageAddresses } from "./pages/manage-addresses"
+import { SavedCards } from "./pages/saved-cards"
+import { Notifications } from "./pages/notifications"
 
 export const routes = createBrowserRouter([
   {
@@ -49,8 +56,38 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/shipping-address",
-        element: <ShippingAddress />,
+        element: <ProceedCheckout />,
       },
     ],
   },
+  {
+    path: '/profile',
+    element: <ProfileLayout />,
+    children: [
+      {
+        path: '/profile/orders',
+        element: <Orders />
+      },
+      {
+        path: "/profile/personal-information",
+        element: <PersonalInformation />
+      },
+      {
+        path: "/profile/wishes",
+        element: <Wishes />
+      },
+      {
+        path: "/profile/manage-addresses",
+        element: <ManageAddresses />
+      },
+      {
+        path: "/profile/saved-cards",
+        element: <SavedCards />
+      },
+      {
+        path: "/profile/notifications",
+        element: <Notifications />
+      }
+    ]
+  }
 ])
