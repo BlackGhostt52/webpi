@@ -6,7 +6,7 @@ import { Image } from "./components/image";
 export const SignUp: React.FC = function() {
     return (
         <>
-            <Helmet title="Entrar"/>
+            <Helmet title="Registrar-se"/>
             <div className="w-full h-full flex flex-row items-center">
                 <Image />
                 <Content />

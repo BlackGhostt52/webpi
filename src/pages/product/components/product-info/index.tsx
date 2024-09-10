@@ -5,6 +5,7 @@ import { Increment } from "../../../../components/increment"
 import { Favorite } from "../favorite"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
 export const ProductInfo: React.FC = function () {
   return (
@@ -91,15 +92,58 @@ export const ProductInfo: React.FC = function () {
         })}
       </div>
 
-      <div className="">
-        <nav>
-          <ul>
-            <li>Descrição</li>
-            <li>Informações adicionais</li>
-            <li>Reviews</li>
-          </ul>
-        </nav>
-      </div>
+      <Tabs defaultValue="descriptions" className="w-full m-0 p-0 mt-7">
+        <TabsList className="m-0 p-0 bg-transparent border-b-[1px] rounded-none w-full flex flex-row justify-start gap-6 mb-3">
+          <TabsTrigger value="descriptions" className="p-0 m-0 visited:text-foreground disabled:text-muted-foreground text-lg focus:border-b-[3px] focus:border-b-zinc-900 rounded-none h-full focus:h-[43px]">Descrição</TabsTrigger>
+          <TabsTrigger value="additionalInformation" className="p-0 m-0 visited:text-foreground disabled:text-muted-foreground text-lg focus:border-b-[3px] focus:border-b-zinc-900 rounded-none h-full focus:h-[43px]">Informações Adicionais</TabsTrigger>
+          <TabsTrigger value="review" className="p-0 m-0 visited:text-foreground disabled:text-muted-foreground text-lg focus:border-b-[3px] focus:border-b-zinc-900 rounded-none h-full focus:h-[43px]">Revisar</TabsTrigger>
+        </TabsList>
+        <TabsContent value="descriptions" className="m-0 p-0">
+          <div className="border-b-zinc-100 border-b-[2px] pb-4">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora quo cumque odit, nobis amet ab voluptatibus quas, animi expedita laborum modi atque laudantium sapiente. Itaque perferendis optio placeat est repudiandae.
+          </div>
+        </TabsContent>
+        <TabsContent value="additionalInformation" className="m-0 p-0">
+          <div className="border-b-zinc-100 border-b-[2px] pb-4">
+            <div className="flex flex-row gap-5">
+              <strong>Cor</strong>
+              <p>Red, Green, Orange</p>
+            </div>
+            <div className="flex flex-row gap-5 mt-2">
+              <strong>Size</strong>
+              <p>S, M, L, XL, XXL</p>
+            </div>
+          </div>
+        </TabsContent>
+        <TabsContent value="review">
+          <div className="mt-8">
+            <strong className="">Comentários dos consumidores</strong>
+            <div className="mt-2">
+              {
+                Array.from({ length: 5 }).map((_, index) => {
+                  return (
+                    <div key={index} className="border-b-[1px] border-b-zinc-200 py-4">
+                        <div className="flex flex-row gap-4 mb-3">
+                          <img src="" alt="" className="w-[50px] h-[50px]"/>
+                          <div className="flex flex-col">
+                            <p>John Doe</p>
+                            <StarRating rating={5} totalStars={5}/>
+                          </div>
+                        </div>
+      
+                      <strong>Commento titulum</strong>
+      
+                      <p className="mb-3 mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt possimus eius nulla harum tempore facilis voluptas et ipsa animi beatae! Repellat iste expedita sapiente, nihil laborum fugit eveniet esse harum.</p>
+      
+                      <span className="text-zinc-400">Posted on Jone 05, 2023</span>
+                    </div>
+                  )
+                })
+              }
+            </div>
+          </div>
+        </TabsContent>
+      </Tabs>
     </div>
   )
 }

@@ -11,8 +11,10 @@ export const Product: React.FC = function () {
       <Helmet title="Product Name" />
       <div className="w-full h-full flex flex-wrap justify-center">
         <Header />
-        <ProductInfo />
-        <RelatedProduct />
+        <div className="my-14">
+          <ProductInfo />
+          <RelatedProduct />
+        </div>
         <Footer />
       </div>
     </>

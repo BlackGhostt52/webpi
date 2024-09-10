@@ -12,9 +12,13 @@ export const ProductList: React.FC = function () {
       <Helmet title="Pesquisa de Produtos" />
       <div className="w-full h-full flex flex-col items-center">
         <Header />
-        <Navigation />
-        <Filter />
-        <Main />
+        <div className="flex flex-row gap-9 mt-14">
+          <div className="">
+            <Navigation />
+            <Filter />
+          </div>
+          <Main />
+        </div>
         <Footer />
       </div>
     </>

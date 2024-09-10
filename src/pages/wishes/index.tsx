@@ -1,10 +1,13 @@
 import { ShoppingCart,
      Trash } from "@phosphor-icons/react";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export const Wishes: React.FC = function() {
     return (
-        <div className="w-full flex flex-row flex-wrap justify-between mt-[88px]">
+        <>
+          <Helmet title="Lista de Desejos"/>
+          <div className="w-full flex flex-row flex-wrap justify-between mt-[88px]">
             {Array.from({ length: 40 }).map((_, index) => {
           return (
             <div key={index} className="w-[262px] mb-3 relative">
@@ -37,5 +40,6 @@ export const Wishes: React.FC = function() {
           )
         })}
         </div>
+        </>
     )
 }

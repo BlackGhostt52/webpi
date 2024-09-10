@@ -8,12 +8,11 @@ import {
     BreadcrumbSeparator,
 } from "@/components/ui/breadcrumb"
 import { Link } from "react-router-dom";
-import { Slash } from "lucide-react";
   
 
 export const Navigation: React.FC = function() {
     return (
-        <Breadcrumb>
+            <Breadcrumb>
             <BreadcrumbList>
                 <BreadcrumbItem>
                     <BreadcrumbLink asChild>
@@ -27,6 +26,6 @@ export const Navigation: React.FC = function() {
                     </BreadcrumbLink>
                 </BreadcrumbItem>
             </BreadcrumbList>
-        </Breadcrumb>
+            </Breadcrumb>
     )
 }

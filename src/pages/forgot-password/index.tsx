@@ -6,7 +6,7 @@ import { Image } from "./components/image";
 export const ForgotPassword: React.FC = function() {
     return (
         <>
-            <Helmet title="Entrar"/>
+            <Helmet title="Recuperar senha"/>
             <div className="w-full h-full flex flex-row items-center">
                 <Image />
                 <Content />

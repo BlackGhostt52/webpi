@@ -10,7 +10,6 @@ import { Eye, ShoppingCart, Star } from "@phosphor-icons/react"
 import {
   Pagination,
   PaginationContent,
-  PaginationEllipsis,
   PaginationItem,
   PaginationLink,
   PaginationNext,
@@ -19,11 +18,11 @@ import {
 
 export const Main: React.FC = function () {
   return (
-    <div className="w-[847px] flex flex-col items-center justify-center">
-      <header className="w-full flex flex-row items-center justify-between">
+    <div className="w-[847px] flex flex-col items-center justify-center mt-14">
+      <header className="w-full flex flex-row items-center justify-between mb-3">
         <div className="text-sm">Mostrando 1 - 20 de 800 resultados</div>
         <Select>
-          <SelectTrigger className="w-[90px] border-none">
+          <SelectTrigger className="w-[90px] border-none focus:ring-0 focus:outline-none">
             <SelectValue placeholder="Listar" />
           </SelectTrigger>
           <SelectContent>

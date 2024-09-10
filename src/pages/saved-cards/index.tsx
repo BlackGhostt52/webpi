@@ -5,10 +5,13 @@ import { Label } from "@/components/ui/label";
 import { Plus, Trash } from "@phosphor-icons/react";
 import { NotePencil } from "@phosphor-icons/react/dist/ssr";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export const SavedCards: React.FC = function() {
     return (
-        <div className="w-full flex flex-col mt-[88px]">
+        <>
+            <Helmet title="Cartões Salvas"/>
+            <div className="w-full flex flex-col mt-[88px]">
             <Dialog>
                 <DialogTrigger asChild>
                     <Button className="text-background w-[320px]">
@@ -83,5 +86,6 @@ export const SavedCards: React.FC = function() {
                 }
             </div>
         </div>
+        </>
     )
 }

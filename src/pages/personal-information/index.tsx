@@ -4,10 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { NotePencil } from "@phosphor-icons/react";
 import React from "react";
+import { Helmet } from "react-helmet-async";
 
 export const PersonalInformation: React.FC = function() {
     return (
-        <div className="w-full mt-[88px]">
+        <>
+            <Helmet title="Informações pessoas"/>
+            <div className="w-full mt-[88px]">
             <div className="flex flex-row justify-between">
                 <Avatar className="w-20 h-20 bg-zinc-200">
                     <AvatarImage src="" className=""/>
@@ -46,5 +49,6 @@ export const PersonalInformation: React.FC = function() {
                 </div>
             </form>
         </div>
+        </>
     )
 }

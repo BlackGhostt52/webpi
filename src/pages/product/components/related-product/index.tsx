@@ -3,7 +3,7 @@ import React from "react"
 
 export const RelatedProduct: React.FC = function () {
   return (
-    <div className="w-[1140px]">
+    <div className="w-[1140px] mt-14">
       <h2 className="font-bold text-3xl mb-11">Produtos Relacionados</h2>
       <main className="w-full flex flex-wrap justify-between">
         {Array.from({ length: 4 }).map((_, index) => {

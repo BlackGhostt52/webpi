@@ -11,7 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox";
 
 export const Filter: React.FC = function() {
     return (
-        <Accordion type="multiple" className="w-[263px]">
+        <Accordion type="multiple" className="w-[263px] mt-6">
             <AccordionItem value="item-1">
                 <AccordionTrigger className="hover:no-underline">Categorias de Produto</AccordionTrigger>
                 <AccordionContent>

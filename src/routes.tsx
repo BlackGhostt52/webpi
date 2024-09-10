@@ -16,6 +16,7 @@ import { Wishes } from "./pages/wishes"
 import { ManageAddresses } from "./pages/manage-addresses"
 import { SavedCards } from "./pages/saved-cards"
 import { Notifications } from "./pages/notifications"
+import { Settings } from "./pages/settings"
 
 export const routes = createBrowserRouter([
   {
@@ -87,6 +88,10 @@ export const routes = createBrowserRouter([
       {
         path: "/profile/notifications",
         element: <Notifications />
+      }, 
+      {
+        path: "/profile/settings",
+        element: <Settings />
       }
     ]
   }

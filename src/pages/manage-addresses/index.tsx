@@ -11,11 +11,14 @@ import {
   } from "@/components/ui/dialog"
 import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
+import { Helmet } from "react-helmet-async";
   
 
 export const ManageAddresses: React.FC = function() {
     return ( 
-        <div className="w-full flex flex-col mt-[88px]">
+        <>
+            <Helmet title="Gerenciar Endereços"/>
+            <div className="w-full flex flex-col mt-[88px]">
             <Dialog>
                 <DialogTrigger asChild>
                     <Button className="text-background w-[320px]">
@@ -93,5 +96,6 @@ export const ManageAddresses: React.FC = function() {
                 }
             </div>
         </div>
+        </>
     )
 }
